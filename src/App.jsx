@@ -9,7 +9,7 @@ import Caeousel from './components/Caeousel'
 import Intell from './components/Intell'
 import Security from './components/Security'
 import Dream from './components/Dream'
-import Mac from './components/mac'
+import Mac from './components/Mac'
 import Fly from './components/Fly'
 
 const App = () => {

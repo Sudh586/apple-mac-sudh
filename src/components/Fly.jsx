@@ -72,7 +72,7 @@ const Fly = () => {
           />
         </div>
         <div className="zoomer absolute bottom-25 right-40">
-          <img src="/images/9395338.webp" alt="" className="w-[30%]" />
+          <img src="/images/9395338.webp" alt="" className="w-[30%]"/>
         </div>
         <div className="zoomer absolute bottom-5 right-10">
           <img src="/images/amazon-prime-logo-free-png.webp" alt="" className="w-[40%]" />
