@@ -9,17 +9,19 @@ const Herosec_1 = () => {
     const video = videoRef.current;
 
     if (video) {
-      // जब वीडियो लोड हो जाए, तो 11 सेकंड से शुरू करें
       const handleLoadedMetadata = () => {
-        video.currentTime = startTime;
-        video.play(); // ऑटो-प्ले सुनिश्चित करें
+        console.log("Metadata loaded, setting start time...");
+        setTimeout(() => {
+          video.currentTime = startTime;
+          video.play();
+        }, 500); // 500ms delay
       };
 
-      // वीडियो की प्रोग्रेस चेक करें और 90 सेकंड बाद रीस्टार्ट करें
       const handleTimeUpdate = () => {
         if (video.currentTime >= endTime) {
-          video.currentTime = startTime; // वापस 11 सेकंड पर जाएं
-          video.play(); // दोबारा प्ले करें
+          console.log("Looping back to start time...");
+          video.currentTime = startTime;
+          video.play();
         }
       };
 
@@ -41,6 +43,7 @@ const Herosec_1 = () => {
           src="/images/videoplayback (5).mp4"
           autoPlay
           muted
+          playsInline
           className="w-[100%] h-auto mx-auto"
         ></video>
       </div>
